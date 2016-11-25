@@ -17,24 +17,21 @@ public class UserService {
 	@Autowired
 	private UserDAO userDao;
 	
-	@Autowired
-	MemcachedClient memcachedClient;
-	
 	public UserEntity getUserById(int id){
-		try {
+/*		try {
 		if(memcachedClient.get("userId")!=null){
 				System.out.println("memcahed"+memcachedClient.get("userId").toString());
 			}
 		} catch (TimeoutException | InterruptedException | MemcachedException e1) {
 			e1.printStackTrace();
-		}
+		}*/
 		UserEntity user = userDao.getUserById(1);
 		
-		try {
+/*		try {
 			memcachedClient.set("userId",1000,user.getUserName());
 		} catch (TimeoutException | InterruptedException | MemcachedException e) {
 			e.printStackTrace();
-		}
+		}*/
 
 		return user;
 	}

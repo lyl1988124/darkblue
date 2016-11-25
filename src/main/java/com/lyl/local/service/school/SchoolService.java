@@ -16,12 +16,9 @@ public class SchoolService {
 	
 	@Autowired
 	SchoolDao schoolDao;
-	
-	@Autowired
-	public ShardedJedisPool shardedJedisPool;
-	
+
 	public List<SchoolEntity> getSchools(){
-		ShardedJedis shardedJedis = shardedJedisPool.getResource();
+		//ShardedJedis shardedJedis = shardedJedisPool.getResource();
 		List<SchoolEntity> scoolList=null;
 		/*		if(!redisBase.KEYS.exists("schools")){
 			byte[] value = redisBase.LISTS.lpop("schools".getBytes());
@@ -33,7 +30,7 @@ public class SchoolService {
 			scoolList=schoolDao.getSchools();
 			redisBase.LISTS.lpush("school".getBytes(), SerializeUtil.serialize(scoolList));
 		}*/
-		shardedJedis.lpush("redistest", "leehon");
+		//shardedJedis.lpush("redistest", "leehon");
 		scoolList=schoolDao.getSchools();
 		
 		return scoolList;

@@ -3,6 +3,6 @@
 <mapper namespace="com.lyl.local.dao.school.SchoolDao" >
 	<select id="getSchools" resultType="com.lyl.local.entity.school.SchoolEntity">
 		SELECT * 
-		FROM darkblue.school
+		FROM school
 	</select>
 </mapper>

@@ -11,10 +11,10 @@
                         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <!-- redis 缓存加载配置文件 此配置需要在memcached前加载，否则不识别redis的properties文件 原因不明-->
-    <import resource="classpath:redis/spring-redis.xml"/>
+<!--    <import resource="classpath:redis/spring-redis.xml"/>
 
-    <!-- memcahed 缓存加载配置文件-->
-    <import resource="classpath:memcached/spring-memcahed.xml"/>
+    &lt;!&ndash; memcahed 缓存加载配置文件&ndash;&gt;
+    <import resource="classpath:memcached/spring-memcahed.xml"/>-->
 
     <!-- 启用注解 -->                    
     <mvc:annotation-driven>

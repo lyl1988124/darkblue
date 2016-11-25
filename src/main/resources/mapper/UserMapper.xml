@@ -10,7 +10,7 @@
 	
 	<select id="getUserById" resultMap="UserResultMap"  parameterType="INTEGER">
 		SELECT * 
-		FROM darkblue.user_t
+		FROM user
 		WHERE id=#{id}
 	</select>
 </mapper>
